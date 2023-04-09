@@ -14,18 +14,26 @@ beforeEach(() => {
 })
 
 test('filter by all', () => {
-    const newState = filterAffairs(initialState, 'all')
-    expect(newState.length).toBe(5)
-})
+    const filteredAffairs = filterAffairs(initialState, 'all');
+    expect(filteredAffairs.length).toBe(initialState.length);
+});
+
 test('filter by high', () => {
-    const newState = filterAffairs(initialState, 'high')
-    expect(newState.length).toBe(2)
-})
+    const filteredAffairs = filterAffairs(initialState, 'high');
+    expect(filteredAffairs.length).toBe(2);
+    expect(filteredAffairs[0].priority).toBe('high');
+    expect(filteredAffairs[1].priority).toBe('high');
+});
+
 test('filter by middle', () => {
-    const newState = filterAffairs(initialState, 'middle')
-    expect(newState.length).toBe(1)
-})
+    const filteredAffairs = filterAffairs(initialState, 'middle');
+    expect(filteredAffairs.length).toBe(1);
+    expect(filteredAffairs[0].priority).toBe('middle');
+});
+
 test('filter by low', () => {
-    const newState = filterAffairs(initialState, 'low')
-    expect(newState.length).toBe(2)
-})
+    const filteredAffairs = filterAffairs(initialState, 'low');
+    expect(filteredAffairs.length).toBe(2);
+    expect(filteredAffairs[0].priority).toBe('low');
+    expect(filteredAffairs[1].priority).toBe('low');
+});
