@@ -26,6 +26,7 @@
     line-height: 20px;
     font-family: 'Montserrat', sans-serif;
     transition: .3s;
+    height: 40px;
 }
 
 .button:hover {
