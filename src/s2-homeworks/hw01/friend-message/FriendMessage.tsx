@@ -15,6 +15,7 @@ const FriendMessage = (props: MessagePropsType) => {
                     // создаёт студент
                     src={props.message.user.avatar}
                     //
+                    alt={''}
                 />
                 <div className={s.friendText}>
                     <div
