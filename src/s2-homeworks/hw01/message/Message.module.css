@@ -8,8 +8,8 @@
 .imageAndText {
     display: flex;
     gap: 10px;
-    align-items: center;
     justify-content: flex-end;
+    align-items: end;
 }
 
 .imageAndText img {
@@ -49,6 +49,8 @@
 .messageText {
     font-family: unset;
     line-height: 20px;
+    max-width: 600px;
+    white-space: pre-wrap;
 }
 
 .time {
